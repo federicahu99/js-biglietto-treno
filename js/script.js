@@ -1,9 +1,9 @@
 /*
 1- Chiedo quanti chilometri deve percorrere.
-2- Chiedo quanti hanni l'età del passeggiero.
-3- Prezzo iniziale
+2- Chiedo l'età del passeggero.
+3- Prezzo iniziale.
 4- Applicare sconti.
-5- Mostro il prezzo nella pagina con due deccimali.
+5- Mostro il prezzo nella pagina con due decimali.
 */
 
 /* Chiedo quanti km deve percorrere */
@@ -21,6 +21,8 @@ console.log(costoIniziale);
 /* Mostro il prezzo all'user */
 document.getElementById('prezzo-non-scontato').innerText = '€' + costoIniziale;
 
+
+
 /* Applico sconti */
 
 if ( etaViaggiatore < 18 || 65 < etaViaggiatore) {
@@ -29,7 +31,7 @@ if ( etaViaggiatore < 18 || 65 < etaViaggiatore) {
         console.log(scontoMinorenni);
         let prezzoGiovani = (costoIniziale - scontoMinorenni);
         console.log(prezzoGiovani);
-        document.getElementById('nuovo-prezzo').innerText = 'Nuovo prezzo scontato:' + '  ' + '€' + prezzoGiovani ;
+        document.getElementById('nuovo-prezzo').innerText = 'Nuovo prezzo scontato:' + '  ' + '€' + prezzogiovani;
 
     } else if ( 65 < etaViaggiatore ) {
         const scontoOver = costoIniziale * 40 / 100;
@@ -40,3 +42,4 @@ if ( etaViaggiatore < 18 || 65 < etaViaggiatore) {
     }
 }
 
+/* Mostro il prezzo nella pagina con due decimali. */
